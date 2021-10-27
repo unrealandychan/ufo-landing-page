@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import {makeStyles} from "@mui/styles";
+import {CountDownBlock} from "./widgets/countdownBlock";
+import {UfoBackgroundBlock} from "./widgets/ufoBackgroundBlock";
+import {SupportUsBlock} from "./widgets/supportUsBlock";
+import {VideoBlock} from "./widgets/videoBlock";
+
+
+const useStyles = makeStyles(() => ({
+    root: {
+        width: "100%",
+        height: "100vh",
+        background: "#000000",
+    },
+}))
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const classes = useStyles();
+    return (
+
+        <div className={classes.root}>
+            <CountDownBlock/>
+            <UfoBackgroundBlock/>
+            <SupportUsBlock/>
+            <VideoBlock/>
+        </div>
+
+    );
 }
 
 export default App;
