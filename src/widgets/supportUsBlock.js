@@ -5,10 +5,12 @@ import {CardMedia, Typography} from "@mui/material";
 const useStyles = makeStyles(() => ({
     root: {
         padding: 100,
-        display: "flex"
+        display: "flex",
+        flexWrap:"wrap"
     },
     imageWrapper: {
-        flex: 1
+        flex: 1,
+        minWidth:250
     },
     textWrapper: {
         flex: 1,

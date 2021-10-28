@@ -52,7 +52,7 @@ export const CountDownBlock = () => {
     const getTimeDays = (time) => (time / daySeconds) | 0;
 
     const stratTime = Date.now() / 1000; // use UNIX timestamp in seconds
-    const endTime = stratTime + 999999; // use UNIX timestamp in seconds
+    const endTime = 1638316800; // use UNIX timestamp in seconds
 
     const remainingTime = endTime - stratTime;
     const days = Math.ceil(remainingTime / daySeconds);
